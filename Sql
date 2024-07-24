@@ -1,0 +1,18 @@
+SELECT * FROM student_details as sd,course_details as cd,session_details as sesd,course_registration as crd WHERE crd.student_id=sd.id and
+crd.course_id=cd.id and
+crd.session_id =sesd.id and 
+sd.roll_no='CSB21001' and sesd.year=2023 and sesd.term='SPRING SEMESTER'
+
+
+
+SELECT sd.roll_no,cd.code,sesd.year,sesd.term FROM student_details as sd,course_details as cd,session_details as sesd,course_registration as crd WHERE crd.student_id=sd.id and
+crd.course_id=cd.id and
+crd.session_id =sesd.id and 
+sd.roll_no='CSB21001' and sesd.year=2023 and sesd.term='SPRING SEMESTER';
+
+
+
+SELECT sd.name,cd.code,sesd.year,sesd.term FROM faculty_details as sd,course_details as cd,session_details as sesd,course_allotment as crd WHERE crd.faculty_id=sd.id and
+crd.course_id=cd.id and
+crd.session_id =sesd.id and 
+sd.user_name='rcb' and sesd.year=2023 and sesd.term='SPRING SEMESTER';
